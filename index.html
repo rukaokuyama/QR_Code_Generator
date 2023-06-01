@@ -11,9 +11,11 @@
     <div class="container">
       <p>Enter Your Text or URL</p>
       <input type="text" placeholder="Text or URL" id="qrText" />
+
       <div id="imgBox">
-        <img src="" alt="qrImage" />
+        <img src="" id="qrImage" />
       </div>
+
       <button onclick="generateQR()">Generate QR Code</button>
     </div>
 
@@ -24,8 +26,9 @@
 
       function generateQR() {
         qrImage.src =
-          "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
+          " https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
           qrText.value;
+        imgBox.classList.add("show-img");
       }
     </script>
   </body>
